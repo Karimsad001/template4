@@ -286,6 +286,12 @@ body {
 .project {
     background-color: var(--dark-color);
 }
+@media (max-width: 767px) {
+    .tech .container .im{
+        display: flex;
+        justify-content: center;
+    }
+}
 /* End Projects  */
 /* Start Blog  */
 .blog .container .box{
@@ -338,6 +344,11 @@ body {
 
 .footer .copyright span{
     color: var(--yellow-color);
+}
+@media (max-width: 767px) {
+    .footer ul {
+        justify-content: center;
+    }
 }
 /* End Footer  */
 
