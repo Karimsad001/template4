@@ -1,0 +1,347 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-btn {
+    background-color: var(--red-color) !important;
+    color: var(--yellow-color) !important;
+    padding: 0.5rem 1rem !important;
+    border: none !important;
+    font-weight: bold !important;
+}
+
+.main-btn:hover {
+    color: var(--yellow-color);
+}
+
+.main-title::after{
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 2px;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--green-color);
+}
+
+.main-title i{
+    animation: turn .8s linear infinite;
+}
+
+@keyframes turn {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(1turn);
+    }
+}
+/* Small  */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* Medium  */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* Large  */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* Start Variables  */
+:root {
+    --dark-color: #19283f;
+    --green-color: #33d1cc;
+    --red-color: #ff3150;
+    --yellow-color: #ffc400;
+    --section-color: #eff7fa;
+}
+
+/* End Variables  */
+body {
+    font-family: "Roboyo", sans-serif;
+}
+
+.navbar {
+    background-color: var(--dark-color);
+}
+
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:focus,
+.navbar .navbar-nav .nav-link:hover {
+    color: var(--green-color);
+}
+
+
+.navbar .navbar-nav .nav-link {
+    color: white;
+    font-weight: bold;
+}
+
+.container .logo {
+    color: white;
+    font-style: italic;
+    font-size: 26px;
+    margin-right: 25px;
+    text-decoration: none;
+}
+
+.container .logo span {
+    display: block;
+    font-size: 14px;
+    color: var(--green-color);
+    text-decoration: none;
+    letter-spacing: 5px;
+}
+
+.navbar .container i {
+    color: white;
+}
+
+.search {
+    border-left: 1px solid var(--green-color);
+}
+
+.navbar .search i {
+    color: var(--green-color);
+}
+
+.navbar .navbar-toggler {
+    color: white;
+    font-size: 25px;
+    border-color: white;
+}
+
+.navbar .navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar .navbar-toggler[aria-expanded="true"] {
+    border-color: var(--green-color);
+}
+
+/* Start Landing  */
+.landing {
+    background-color: var(--dark-color);
+    min-height: calc(100vh - 76px);
+}
+ /* End Landing  */
+ /* Start Features  */
+.container .main-title >i {
+    color: var(--yellow-color);
+ }
+
+ .features .container .icon-holder {
+    height: 200px;
+ }
+
+ .features .container .icon-holder i{
+    left: 50%;
+    transform: translateX(-50%);
+ }
+
+ .features .container .icon-holder .number{
+    font-size: 12rem;
+    color: var(--section-color);
+ }
+
+ .features .container .icon-holder .icon{
+    color: var(--green-color);
+    font-size: 4rem;
+ }
+
+ .features .container h4 {
+    color: var(--yellow-color);
+ }
+/* End Features  */
+/* Start Our Work  */
+.work {
+    background-color: var(--section-color);
+}
+
+.work ul .active {
+    background-color: var(--red-color);
+    color: var(--yellow-color);
+}
+
+.work ul li {
+    padding: .5rem 1rem;
+    cursor: pointer;
+    border-radius: 7px;
+    transition-duration: .3s;
+
+}
+
+.work ul li:not(.active):hover {
+    color: var(--red-color);
+}
+
+.work .box {
+    padding: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.work .box {
+    height: 250px;
+}
+
+.work .box::before {
+    content: attr(data-work);
+    position: absolute;
+    background-color: #33d1cc57;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+    transition: 0.3s;
+    font-size: 1.5rem;
+    transform: translateX(calc(-100% - 5px));
+}
+
+.work .box:hover::before {
+    transform: translateX(0);
+}
+
+.work .box img{
+    height: 100%;
+    width: 100%;
+}
+/* End Our Work  */
+/* Start Stuff  */
+.stuff .description {
+    max-width: 400px;
+}
+.stuff img {
+    width: 100%;
+    transform: rotate(180deg);
+}
+/* End Stuff  */
+/* Start Our Team  */
+.team {
+    background-color: var(--section-color);
+}
+
+.team .box{
+    background-color: white;
+    height: 416px;
+}
+
+.team .container h2 {
+    color: var(--yellow-color);
+}
+
+.team .container .box h4 {
+    background-color: var(--green-color);
+    color: white;
+    padding: 10px;
+}
+.team .container .box blockquote {
+    text-align: center;
+    padding: 10px;
+}
+/* End Team  */
+/* Start Projects  */
+.project {
+    background-color: var(--dark-color);
+}
+/* End Projects  */
+/* Start Blog  */
+.blog .container .box{
+    border: 1px solid var(--section-color);
+    border-radius: 7px;
+    max-width: 100%;
+}
+
+.blog .container .box p:first-of-type{
+    margin-top: 10px;
+    margin-bottom: 0;
+    padding: 20px 0 10px 10px;
+}
+
+
+.blog .container .box img{
+    width: 100%;
+}
+/* End Blog  */
+/* Start subscribe  */
+.subscribe {
+    background-color: var(--yellow-color);
+}
+
+.subscribe .container form.row .input{
+    border: none;
+    border-bottom: 1px solid white;
+}
+
+.subscribe .container form.row .input:focus{
+    outline: none;
+}
+
+.subscribe .container form.row .input::placeholder{
+    color: white;
+}
+
+.subscribe .container form.row .sub-btn{
+    background-color: var(--dark-color);
+    color: var(--yellow-color);
+}
+/* Start Footer  */
+.footer {
+    background-color: var(--dark-color);
+}
+
+.footer .copyright>span{
+    color: var(--green-color) !important;
+}
+
+.footer .copyright span{
+    color: var(--yellow-color);
+}
+/* End Footer  */
+
+
+
+
+
